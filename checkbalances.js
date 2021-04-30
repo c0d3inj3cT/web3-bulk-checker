@@ -2,7 +2,7 @@ const fs = require("fs")
 const Web3 = require("web3")
 const readline = require("readline")
 // configure the Infura API token here
-var infura_api_token = <token here>
+var infura_api_token = ""
 
 // set the command line arguments
 const argv = require('yargs')
