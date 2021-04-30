@@ -1,6 +1,8 @@
 const fs = require("fs")
 const Web3 = require("web3")
 const readline = require("readline")
+// configure the Infura API token here
+var infura_api_token = <token here>
 
 // set the command line arguments
 const argv = require('yargs')
@@ -21,7 +23,6 @@ var token_contract = argv.contract;
 var filename = argv.file;
 
 // create the readInterface
-
 const readInterface = readline.createInterface({
 	input: fs.createReadStream(filename),
 	output: process.stdout,
@@ -31,7 +32,7 @@ const readInterface = readline.createInterface({
 // check the network name. Only ETH and BSC networks are supported
 if(network == "ETH")
 {
-	var w3 = new Web3(new Web3.providers.HttpProvider('https://mainnet.infura.io/v3/340bf7fc912642b894b845a3d9a707ae'))
+	var w3 = new Web3(new Web3.providers.HttpProvider('https://mainnet.infura.io/v3/' + infura_api_token))
 }
 else if(network == "BSC")
 {
