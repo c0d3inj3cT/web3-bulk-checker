@@ -1,3 +1,5 @@
+// Author: c0d3inj3cT (aka CryptoShine)
+
 const fs = require("fs")
 const Web3 = require("web3")
 const readline = require("readline")
